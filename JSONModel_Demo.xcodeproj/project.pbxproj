@@ -14,7 +14,8 @@
 		4B40F2701E8DF55A00092F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B40F26E1E8DF55A00092F15 /* LaunchScreen.storyboard */; };
 		4B40F27B1E8DF55A00092F15 /* JSONModel_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40F27A1E8DF55A00092F15 /* JSONModel_DemoTests.swift */; };
 		4B40F2861E8DF55A00092F15 /* JSONModel_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40F2851E8DF55A00092F15 /* JSONModel_DemoUITests.swift */; };
-		4B40F2941E8E029100092F15 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B40F2931E8E029100092F15 /* data.json */; };
+		4B40F2961E8E714100092F15 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B40F2951E8E714100092F15 /* data.json */; };
+		4B40F2981E8E72AE00092F15 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B40F2971E8E72AE00092F15 /* videoData.json */; };
 		65417DD71665884B79515C20 /* libPods-JSONModel_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD252CA1CD2BAEA4BF45589 /* libPods-JSONModel_Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +52,8 @@
 		4B40F2811E8DF55A00092F15 /* JSONModel_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONModel_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B40F2851E8DF55A00092F15 /* JSONModel_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModel_DemoUITests.swift; sourceTree = "<group>"; };
 		4B40F2871E8DF55A00092F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B40F2931E8E029100092F15 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		4B40F2951E8E714100092F15 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		4B40F2971E8E72AE00092F15 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
 		7CD252CA1CD2BAEA4BF45589 /* libPods-JSONModel_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSONModel_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,7 +114,8 @@
 				4B40F26C1E8DF55A00092F15 /* Assets.xcassets */,
 				4B40F26E1E8DF55A00092F15 /* LaunchScreen.storyboard */,
 				4B40F2711E8DF55A00092F15 /* Info.plist */,
-				4B40F2931E8E029100092F15 /* data.json */,
+				4B40F2951E8E714100092F15 /* data.json */,
+				4B40F2971E8E72AE00092F15 /* videoData.json */,
 			);
 			path = JSONModel_Demo;
 			sourceTree = "<group>";
@@ -265,7 +268,8 @@
 				4B40F2701E8DF55A00092F15 /* LaunchScreen.storyboard in Resources */,
 				4B40F26D1E8DF55A00092F15 /* Assets.xcassets in Resources */,
 				4B40F26B1E8DF55A00092F15 /* Main.storyboard in Resources */,
-				4B40F2941E8E029100092F15 /* data.json in Resources */,
+				4B40F2981E8E72AE00092F15 /* videoData.json in Resources */,
+				4B40F2961E8E714100092F15 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

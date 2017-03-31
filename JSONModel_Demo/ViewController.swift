@@ -13,13 +13,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadFromLocalJSONFile()
-        loadFromSwiftJSONObject()
+        // 使用系统自带的类 NSJSONSerialization 获取JSON数据
+        getFromLocalJSONFile()
+        getFromSwiftObject()
+        getFromSwiftObject2()
+        
+        
+        // 使用三方类 JSONModel 获取JSON数据
+        //...
     }
 
-    func loadFromLocalJSONFile() {
+    
+    func getFromLocalJSONFile() {
         
-        guard let filePath = Bundle.main.path(forResource: "data", ofType: "json") else {
+//        guard let filePath = Bundle.main.path(forResource: "data", ofType: "json") else {
+//            print("读取本地JSON文件失败！")
+//            return
+//        }
+        
+        guard let filePath = Bundle.main.path(forResource: "videoData", ofType: "json") else {
             print("读取本地JSON文件失败！")
             return
         }
@@ -36,16 +48,17 @@ class ViewController: UIViewController {
         print(jsonObject)
         
         // 使用JSON对象
-        let videoList: AnyObject = jsonObject.object(forKey: "videoList") as AnyObject
-        print(videoList)
+        let list: AnyObject = jsonObject.object(forKey: "list") as AnyObject
+        print(list)
     }
     
-    func loadFromSwiftJSONObject() {
+    
+    func getFromSwiftObject() {
         
         // 给定一个对象
         let object = [
-            "userName": "张三",
-            "tel": ["mobile": "138xxx6666", "home": "010123456"]
+            "userName": "xiaohui",
+            "tel": ["mobile": "186xxxx6666", "home": "666666"]
         ] as [String : Any]
         
         // 判断一个给定的对象是否可以转换为JSON数据
@@ -71,6 +84,27 @@ class ViewController: UIViewController {
         
         let mobile: AnyObject = (jsonObject.object(forKey: "tel") as AnyObject).object(forKey: "mobile") as AnyObject
         print(mobile)
+    }
+    
+    
+    func getFromSwiftObject2(){
+        
+        // 给定一个对象
+        let string: String = "[{\"name\": \"张三\", \"age\": 10}, {\"name\": \"李四\", \"age\": 20}, {\"name\": \"王五\", \"age\": 30}]"
+        
+        let data = string.data(using: .utf8)!
+        
+        // 将data转化为JSON对象
+        let jsonObject: AnyObject = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject
+        print(jsonObject)
+        
+        // 使用JSON对象
+        let jsonArray = jsonObject as! NSArray
+        
+        for json in jsonArray {
+            print("name", (json as AnyObject).object(forKey: "name") ?? AnyObject.self)
+            print("age", (json as AnyObject).object(forKey: "age") ?? AnyObject.self)
+        }
     }
     
     override func didReceiveMemoryWarning() {
