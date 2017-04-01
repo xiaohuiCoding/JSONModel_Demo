@@ -16,6 +16,7 @@
 		4B40F2861E8DF55A00092F15 /* JSONModel_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40F2851E8DF55A00092F15 /* JSONModel_DemoUITests.swift */; };
 		4B40F2961E8E714100092F15 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B40F2951E8E714100092F15 /* data.json */; };
 		4B40F2981E8E72AE00092F15 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B40F2971E8E72AE00092F15 /* videoData.json */; };
+		4BA860051E8F889F00B83C78 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA860041E8F889F00B83C78 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		65417DD71665884B79515C20 /* libPods-JSONModel_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD252CA1CD2BAEA4BF45589 /* libPods-JSONModel_Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,9 @@
 		4B40F2871E8DF55A00092F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B40F2951E8E714100092F15 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		4B40F2971E8E72AE00092F15 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
+		4BA860011E8F817400B83C78 /* JSONModel_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSONModel_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		4BA860031E8F889F00B83C78 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		4BA860041E8F889F00B83C78 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		7CD252CA1CD2BAEA4BF45589 /* libPods-JSONModel_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSONModel_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +120,9 @@
 				4B40F2711E8DF55A00092F15 /* Info.plist */,
 				4B40F2951E8E714100092F15 /* data.json */,
 				4B40F2971E8E72AE00092F15 /* videoData.json */,
+				4BA860031E8F889F00B83C78 /* JSONKit.h */,
+				4BA860041E8F889F00B83C78 /* JSONKit.m */,
+				4BA860011E8F817400B83C78 /* JSONModel_Demo-Bridging-Header.h */,
 			);
 			path = JSONModel_Demo;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 				TargetAttributes = {
 					4B40F2611E8DF55A00092F15 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					4B40F2751E8DF55A00092F15 = {
@@ -344,6 +352,7 @@
 			files = (
 				4B40F2681E8DF55A00092F15 /* ViewController.swift in Sources */,
 				4B40F2661E8DF55A00092F15 /* AppDelegate.swift in Sources */,
+				4BA860051E8F889F00B83C78 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,10 +503,13 @@
 			baseConfigurationReference = 3F0F3AA9FAB446AB0B755EE8 /* Pods-JSONModel_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = JSONModel_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xh.JSONModel-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JSONModel_Demo/JSONModel_Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -507,10 +519,12 @@
 			baseConfigurationReference = 204F47261F8918CE46C23158 /* Pods-JSONModel_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = JSONModel_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xh.JSONModel-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JSONModel_Demo/JSONModel_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
